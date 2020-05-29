@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pillar.vending.VendingMachineUTests
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s - in com.pillar.vending.VendingMachineUTests
