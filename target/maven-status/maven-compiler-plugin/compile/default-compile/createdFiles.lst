@@ -1,12 +1,13 @@
-com\pillar\coin\Dime.class
-com\pillar\vending\VendingMachine.class
 com\pillar\globals\Consts.class
-com\pillar\product\Pretzels.class
 com\pillar\coin\Penny.class
 com\pillar\product\Cola.class
+Client.class
 com\pillar\product\Product.class
 com\pillar\coin\Quarter.class
-com\pillar\product\Chips.class
 com\pillar\product\Candy.class
+com\pillar\coin\Dime.class
+com\pillar\vending\VendingMachine.class
+com\pillar\product\Pretzels.class
+com\pillar\product\Chips.class
 com\pillar\coin\Nickel.class
 com\pillar\coin\Coin.class

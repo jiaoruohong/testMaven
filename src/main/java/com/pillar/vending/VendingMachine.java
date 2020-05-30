@@ -98,4 +98,8 @@ public class VendingMachine {
             total += coin;
         return total;
     }
+
+    public Double totalMoney(){
+        return sum(acceptedCoins);
+    }
 }
