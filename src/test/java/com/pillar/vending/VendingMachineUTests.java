@@ -1,13 +1,60 @@
 package com.pillar.vending;
 
+import com.pillar.coin.*;
 import com.pillar.globals.Consts;
+import com.pillar.product.Product;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+
+@RunWith(MockitoJUnitRunner.class)
 public class VendingMachineUTests {
 
+    private static Coin quarter=mock(Coin.class);
+    private static Coin dime=mock(Coin.class);
+    private static Coin nickel=mock(Coin.class);
+    private static Coin penny=mock(Coin.class);
+
+    private static Product cola=mock(Product.class);
+    private static Product chips=mock(Product.class);
+    private static Product candy= mock(Product.class);
+    private static Product pretzels=mock(Product.class);
+
     private VendingMachine vm;
+
+    @BeforeClass
+    public static void beforeClass() throws Exception {
+        when(quarter.getWeight()).thenReturn(5.67);
+        when(quarter.getSize()).thenReturn(0.955);
+
+        when(dime.getWeight()).thenReturn(2.28);
+        when(dime.getSize()).thenReturn(0.705);
+
+        when(nickel.getWeight()).thenReturn(5.01);
+        when(nickel.getSize()).thenReturn(0.835);
+
+        when(penny.getWeight()).thenReturn(2.5);
+        when(penny.getSize()).thenReturn(0.75);
+
+        when(cola.getPrice()).thenReturn(1.0);
+        when(cola.getQuantity()).thenReturn(10);
+
+        when(chips.getPrice()).thenReturn(0.50);
+        when(chips.getQuantity()).thenReturn(10);
+
+        when(candy.getPrice()).thenReturn(0.65);
+        when(candy.getQuantity()).thenReturn(10);
+
+//        when(pretzels.getPrice()).thenReturn(1.0);
+//        when(pretzels.getQuantity()).thenReturn(0);
+    }
 
     @Before
     public void setUp() {
@@ -21,7 +68,8 @@ public class VendingMachineUTests {
 
     @Test
     public void acceptsQuarter() {
-        vm.accept(Consts.QUARTER);
+//        test with mockito
+        vm.accept(quarter);
         Assert.assertTrue("should display amount of quarter inserted.", vm.display().equals("0.25"));
     }
 
@@ -39,15 +87,17 @@ public class VendingMachineUTests {
 
     @Test
     public void acceptsMultipleValidCoins() {
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.DIME);
-        vm.accept(Consts.NICKEL);
+//        test with mockito
+        vm.accept(quarter);
+        vm.accept(dime);
+        vm.accept(nickel);
         Assert.assertTrue("should display amount of cents inserted.", vm.display().equals("0.40"));
     }
 
     @Test
     public void doesNotAcceptInvalidCoins() {
-        vm.accept(Consts.PENNY);
+//        test with mockito
+        vm.accept(penny);
         Assert.assertTrue("should display INSERT COIN because there are none.", vm.display().equals("INSERT COIN"));
     }
 
@@ -63,11 +113,12 @@ public class VendingMachineUTests {
 
     @Test
     public void colaIsDispensedWithCorrectAmount() {
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.QUARTER);
-        vm.selectProduct(Consts.COLA);
+//        test with mockito
+        vm.accept(quarter);
+        vm.accept(quarter);
+        vm.accept(quarter);
+        vm.accept(quarter);
+        vm.selectProduct(cola);
         Assert.assertTrue("should display THANK YOU after vending", vm.display().equals("THANK YOU"));
         Assert.assertTrue("should display INSERT COIN after display of THANK YOU", vm.display().equals("INSERT COIN"));
     }
@@ -127,11 +178,13 @@ public class VendingMachineUTests {
 
     @Test
     public void retrieveChangeAfterChipsPurchase() {
+//        test with mockito
         vm.accept(Consts.QUARTER);
         vm.accept(Consts.QUARTER);
         vm.accept(Consts.QUARTER);
         vm.accept(Consts.DIME);
-        vm.selectProduct(Consts.CHIPS);
+//        vm.selectProduct(Consts.CHIPS);
+        vm.selectProduct(chips);
         Assert.assertTrue("should display THANK YOU after vending", vm.display().equals("THANK YOU"));
         Assert.assertTrue("should display INSERT COIN after display of THANK YOU", vm.display().equals("INSERT COIN"));
         Assert.assertTrue("should return proper change", vm.retrieveChange().equals("0.35"));
@@ -139,13 +192,14 @@ public class VendingMachineUTests {
 
     @Test
     public void retrieveChangeAfterCandyPurchase() {
-        vm.accept(Consts.NICKEL);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.NICKEL);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.DIME);
-        vm.accept(Consts.DIME);
-        vm.selectProduct(Consts.CANDY);
+//        test with mockito
+        vm.accept(nickel);
+        vm.accept(quarter);
+        vm.accept(nickel);
+        vm.accept(quarter);
+        vm.accept(dime);
+        vm.accept(dime);
+        vm.selectProduct(candy);
         Assert.assertTrue("should display THANK YOU after vending", vm.display().equals("THANK YOU"));
         Assert.assertTrue("should display INSERT COIN after display of THANK YOU", vm.display().equals("INSERT COIN"));
         Assert.assertTrue("should return proper change", vm.retrieveChange().equals("0.15"));
@@ -153,12 +207,13 @@ public class VendingMachineUTests {
 
     @Test
     public void coinsAreReturned() {
-        vm.accept(Consts.NICKEL);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.NICKEL);
-        vm.accept(Consts.QUARTER);
-        vm.accept(Consts.DIME);
-        vm.accept(Consts.DIME);
+//        test with mockito
+        vm.accept(nickel);
+        vm.accept(quarter);
+        vm.accept(nickel);
+        vm.accept(quarter);
+        vm.accept(dime);
+        vm.accept(dime);
         Assert.assertTrue("should display amount of change inserted.", vm.display().equals("0.80"));
         vm.returnCoins();
         Assert.assertTrue("should display INSERT COIN after coins are returned", vm.display().equals("INSERT COIN"));
@@ -175,7 +230,8 @@ public class VendingMachineUTests {
 
     @Test
     public void machineDisplaysSoldOut() {
-        vm.selectProduct(Consts.PRETZELS);
+//        test with mockito
+        vm.selectProduct(pretzels);
         Assert.assertTrue("should display SOLD OUT when product is sold out", vm.display().equals("SOLD OUT"));
         Assert.assertTrue("should display INSERT COIN since machine has no inserted coins", vm.display().equals("INSERT COIN"));
     }
