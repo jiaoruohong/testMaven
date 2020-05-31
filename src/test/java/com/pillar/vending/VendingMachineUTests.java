@@ -75,7 +75,8 @@ public class VendingMachineUTests {
 
     @Test
     public void acceptsDime() {
-        vm.accept(Consts.DIME);
+//        test with mockito
+        vm.accept(dime);
         Assert.assertTrue("should display amount of dime inserted.", vm.display().equals("0.10"));
     }
 

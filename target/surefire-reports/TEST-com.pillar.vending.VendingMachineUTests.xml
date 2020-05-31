@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.pillar.vending.VendingMachineUTests" time="0.054" tests="20" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.pillar.vending.VendingMachineUTests" time="0.468" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\App\Java\jdk1.8.0_251\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\SILHOU~1\AppData\Local\Temp\surefire2950454074196638991\surefirebooter4003207683520055264.jar C:\Users\silhouette\AppData\Local\Temp\surefire2950454074196638991 2020-05-30T12-43-51_298-jvmRun1 surefire3594659105607376336tmp surefire_03970068649449429307tmp"/>
+    <property name="sun.java.command" value="C:\Users\SILHOU~1\AppData\Local\Temp\surefire8974253966293096966\surefirebooter8904464438852124803.jar C:\Users\silhouette\AppData\Local\Temp\surefire8974253966293096966 2020-05-31T10-07-18_096-jvmRun1 surefire329638288782884586tmp surefire_04700168953745328131tmp"/>
     <property name="surefire.test.class.path" value="E:\github.com\jiaoruohong\testMaven\target\test-classes;E:\github.com\jiaoruohong\testMaven\target\classes;C:\Users\silhouette\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\silhouette\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\silhouette\.m2\repository\org\mockito\mockito-core\3.0.0\mockito-core-3.0.0.jar;C:\Users\silhouette\.m2\repository\net\bytebuddy\byte-buddy\1.9.10\byte-buddy-1.9.10.jar;C:\Users\silhouette\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.10\byte-buddy-agent-1.9.10.jar;C:\Users\silhouette\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\silhouette"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\SILHOU~1\AppData\Local\Temp\surefire2950454074196638991\surefirebooter4003207683520055264.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\SILHOU~1\AppData\Local\Temp\surefire8974253966293096966\surefirebooter8904464438852124803.jar"/>
     <property name="sun.boot.class.path" value="D:\App\Java\jdk1.8.0_251\jre\lib\resources.jar;D:\App\Java\jdk1.8.0_251\jre\lib\rt.jar;D:\App\Java\jdk1.8.0_251\jre\lib\sunrsasign.jar;D:\App\Java\jdk1.8.0_251\jre\lib\jsse.jar;D:\App\Java\jdk1.8.0_251\jre\lib\jce.jar;D:\App\Java\jdk1.8.0_251\jre\lib\charsets.jar;D:\App\Java\jdk1.8.0_251\jre\lib\jfr.jar;D:\App\Java\jdk1.8.0_251\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,22 +62,22 @@
   </properties>
   <testcase name="displayShowsInsertCoinWhenEmpty" classname="com.pillar.vending.VendingMachineUTests" time="0.007"/>
   <testcase name="machineDisplaysSoldOut" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
-  <testcase name="acceptsNickel" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
-  <testcase name="retrieveChangeAfterChipsPurchase" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
+  <testcase name="acceptsNickel" classname="com.pillar.vending.VendingMachineUTests" time="0.002"/>
+  <testcase name="retrieveChangeAfterChipsPurchase" classname="com.pillar.vending.VendingMachineUTests" time="0.002"/>
   <testcase name="candyIsDispensedWithCorrectAmount" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="machineDisplaysExactChangeOnly" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="acceptsQuarter" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="coinsAreReturned" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="displayIsCorrectWhenProductIsSelectedButLacksFunds" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
+  <testcase name="machineDisplaysExactChangeOnly" classname="com.pillar.vending.VendingMachineUTests" time="0.002"/>
+  <testcase name="acceptsQuarter" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
+  <testcase name="coinsAreReturned" classname="com.pillar.vending.VendingMachineUTests" time="0.002"/>
+  <testcase name="displayIsCorrectWhenProductIsSelectedButLacksFunds" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
   <testcase name="coinsAreReturnedAfterProductIsSelected" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="machineDisplaysSoldOutWithCoins" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="doesNotAcceptInvalidCoins" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
+  <testcase name="machineDisplaysSoldOutWithCoins" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
+  <testcase name="doesNotAcceptInvalidCoins" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
   <testcase name="chipsIsDispensedWithCorrectAmount" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="acceptsDime" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
+  <testcase name="acceptsDime" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
   <testcase name="acceptsValidAndRejectsInvalidCoins" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
   <testcase name="colaIsDispensedWithCorrectAmount" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="retrieveChangeAfterCandyPurchase" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
-  <testcase name="displayIsCorrectWhenProductIsSelectedButLacksFundsAndMoreCoinsAreInserted" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
+  <testcase name="retrieveChangeAfterCandyPurchase" classname="com.pillar.vending.VendingMachineUTests" time="0.002"/>
+  <testcase name="displayIsCorrectWhenProductIsSelectedButLacksFundsAndMoreCoinsAreInserted" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
   <testcase name="retrieveChangeAfterColaPurchase" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
-  <testcase name="acceptsMultipleValidCoins" classname="com.pillar.vending.VendingMachineUTests" time="0"/>
+  <testcase name="acceptsMultipleValidCoins" classname="com.pillar.vending.VendingMachineUTests" time="0.001"/>
 </testsuite>
